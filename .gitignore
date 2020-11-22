@@ -4,4 +4,5 @@ packages/
 **/obj/
 
 *.user
-log4net.config
+*.ico
+*.png

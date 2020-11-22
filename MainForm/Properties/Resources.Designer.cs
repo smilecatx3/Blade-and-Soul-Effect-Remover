@@ -59,5 +59,36 @@ namespace GitHub.Smilecatx3.BladeAndSoul.EffectRemover.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icon {
+            get {
+                object obj = ResourceManager.GetObject("icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;log4net&gt;
+        ///	&lt;appender name=&quot;Console&quot; type=&quot;log4net.Appender.ConsoleAppender&quot;&gt;
+        ///		&lt;layout type=&quot;log4net.Layout.PatternLayout&quot;&gt;
+        ///			&lt;conversionPattern value=&quot;[%level] %message%newline&quot; /&gt;
+        ///		&lt;/layout&gt;
+        ///	&lt;/appender&gt;
+        ///	&lt;appender name=&quot;RollingFileAppender&quot; type=&quot;log4net.Appender.RollingFileAppender&quot;&gt;
+        ///		&lt;file type=&quot;log4net.Util.PatternString&quot; value=&quot;log\&quot; /&gt;
+        ///		&lt;appendToFile value=&quot;true&quot; /&gt;
+        ///    &lt;encoding value=&quot;utf-8&quot; /&gt;
+        ///		&lt;rollingStyle value=&quot;Composite&quot; /&gt;
+        ///		&lt;datePatt [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string log4net {
+            get {
+                return ResourceManager.GetString("log4net", resourceCulture);
+            }
+        }
     }
 }

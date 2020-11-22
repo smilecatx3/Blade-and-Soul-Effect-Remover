@@ -2,22 +2,30 @@
 
 namespace GitHub.Smilecatx3.BladeAndSoul.EffectRemover {
     internal class Settings {
-        public const string SaveSettings = "SaveSettings";
-        public const string GamePath = "GamePath";
-        public const string ExcludedClass = "ExcludedClass";
-        private const string SubKey = @"SOFTWARE\GitHub\smilecatx3\BladeAndSoul\EffectRemover";
+        public static readonly Setting SaveSettings = new Setting("SaveSettings");
+        public static readonly Setting GamePath = new Setting("GamePath");
+        public static readonly Setting KeptClassNames = new Setting("KeptClassNames");
+    }
 
-        static Settings() {
+    internal class Setting {
+        private const string SubKey = @"SOFTWARE\GitHub\smilecatx3\BladeAndSoul\EffectRemover";
+        private string name;
+
+        static Setting() {
             Registry.CurrentUser.CreateSubKey(SubKey);
         }
 
-        public static string Load(string name) {
+        public Setting(string name) {
+            this.name = name;
+        }
+
+        public string Load() {
             using (var key = Registry.CurrentUser.OpenSubKey(SubKey)) {
                 return (key != null) ? key.GetValue(name, "").ToString() : "";
             }
         }
 
-        public static void Save(string name, string value) {
+        public void Save(string value) {
             using (var key = Registry.CurrentUser.OpenSubKey(SubKey, true)) {
                 if (key != null) {
                     key.SetValue(name, value);
@@ -25,7 +33,7 @@ namespace GitHub.Smilecatx3.BladeAndSoul.EffectRemover {
             }
         }
 
-        public static void Delete(string name) {
+        public void Delete() {
             using (var key = Registry.CurrentUser.OpenSubKey(SubKey, true)) {
                 if (key != null) {
                     key.DeleteValue(name, false);

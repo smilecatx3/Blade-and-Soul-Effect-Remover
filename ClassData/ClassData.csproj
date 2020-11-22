@@ -9,30 +9,36 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GitHub.Smilecatx3.BladeAndSoul.EffectRemover</RootNamespace>
     <AssemblyName>ClassData</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\x64\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>IDE0044</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,8 +48,58 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassInfo.cs" />
-    <Compile Include="ClassList.cs" />
+    <Compile Include="ClassTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assassin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BladeDancer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BladeMaster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Destroyer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ForceMaster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gunslinger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KungFuFighter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SoulFighter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Summoner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astromancer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warrior.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
