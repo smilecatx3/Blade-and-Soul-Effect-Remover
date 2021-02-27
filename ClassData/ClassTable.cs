@@ -15,7 +15,7 @@ namespace GitHub.Smilecatx3.BladeAndSoul.EffectRemover {
             Data["BladeDancer"] = new ClassInfo {
                 Name = "BladeDancer",
                 Text = "燐劍",
-                UpkSet = new HashSet<string> { "00018601", "00031769", "00056574", "00056585", "00060555" },
+                UpkSet = new HashSet<string> { "00018601", "00031769", "00056574", "00056585", "00060555", "00072644", "00072646", "00078303", "00078533" },
                 Icon = Resources.BladeDancer
             };
             Data["SoulFighter"] = new ClassInfo {
